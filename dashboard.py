@@ -149,3 +149,16 @@ ax[1].tick_params(axis='y', labelsize=30)
 ax[1].set_title("Top 5 Best Selling Product Categories", fontsize=40)
 
 st.pyplot(fig)
+
+
+# Product Price VS Freight Value
+st.subheader('Product Price vs Freight Value')
+
+fig, ax = plt.subplots(figsize=(12, 5))
+sns.scatterplot(x='price', y='freight_value', data=order_products_df, ax=ax)
+ax.set_xlabel("Product Price")
+ax.set_ylabel("Freight Value")
+ax.tick_params(axis='x', labelsize=15)
+ax.tick_params(axis='y', labelsize=15)
+
+st.pyplot(fig)
